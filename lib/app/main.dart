@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_template/core/services/notification_service.dart';
+import 'package:talker_riverpod_logger/talker_riverpod_logger_observer.dart';
 
 import '../core/database/database_helper.dart';
 import '../core/environment/environment_config.dart';
@@ -26,6 +28,17 @@ FutureOr<void> main() async {
     Logging.handleError(e, stack);
   }
 
+  // Initialize notifications
+  await NotificationService.initialize();
+  await NotificationService.showNotification();
+
   // Run the app
-  runApp(const ProviderScope(child: App()));
+  runApp(ProviderScope(
+    observers: [
+      TalkerRiverpodObserver(
+        talker: Logging.talker,
+      ),
+    ],
+    child: App(),
+  ));
 }

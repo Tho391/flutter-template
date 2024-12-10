@@ -2,6 +2,7 @@ import 'dart:core';
 
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart'; // For permission handling
+import 'package:talker_flutter/talker_flutter.dart';
 
 import '../app/flavors.dart'; // Assuming you are using F class for flavors
 import '../core/logging/logging.dart';
@@ -116,6 +117,8 @@ class MyHomePage extends StatelessWidget {
               onPressed: () => showSchool(context),
               child: const Text('Show School'),
             ),
+            SizedBox(height: 16),
+
             // Button to navigate to Login Screen
             ElevatedButton(
               onPressed: () {
@@ -127,6 +130,18 @@ class MyHomePage extends StatelessWidget {
                 );
               },
               child: const Text('Go to Login Screen'),
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => TalkerScreen(
+                          talker: Logging.talker)), // Navigate to LoginScreen
+                );
+              },
+              child: const Text('Go to Talker Screen'),
             ),
           ],
         ),

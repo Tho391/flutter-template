@@ -22,11 +22,6 @@ class Logging {
     ),
   );
 
-  // TalkerLogger instance for structured log levels
-  static TalkerLogger logger = TalkerLogger(
-    settings: TalkerLoggerSettings(level: LogLevel.info),
-  );
-
   // Dio Logger for HTTP request/response logging
   static TalkerDioLogger dioLogger = TalkerDioLogger(talker: talker);
 
@@ -43,20 +38,8 @@ class Logging {
     talker.error(message);
   }
 
-  /// Log with a specific level.
-  static void log(String message, {LogLevel level = LogLevel.info}) {
-    logger.log(message, level: level);
-  }
-
   /// Global error handler for uncaught exceptions.
   static void handleError(Object error, StackTrace stack) {
     talker.handle(error, stack, 'Uncaught exception');
-  }
-
-  /// Configure Dio with TalkerDioLogger to log HTTP requests and responses.
-  static Dio configureDio() {
-    final dio = Dio();
-    dio.interceptors.add(dioLogger);
-    return dio;
   }
 }
