@@ -64,3 +64,24 @@ flutter build apk --flavor prod -t lib/main_prod.dart
 ```bash
 flutter build ios --flavor prod -t lib/main_prod.dart
 ```
+
+
+## 4. Generate `intl_utils` Files
+
+```bash
+flutter pub run intl_utils:generate
+```
+
+## 5. Run Code Generation for Freezed and Other Builders
+
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+## 6. Troubleshooting
+
+```bash
+flutter clean
+flutter pub get
+flutter pub run build_runner build
+```

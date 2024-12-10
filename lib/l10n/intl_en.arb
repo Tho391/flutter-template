@@ -1,4 +1,5 @@
 {
+  "@@locale": "en",
   "title": "My Flutter App",
   "greeting": "Hello, welcome to the app!",
   "@greeting": {

@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart'; // For permission handling
 
 import '../app/flavors.dart'; // Assuming you are using F class for flavors
-import '../core/logging/logging.dart'; // Importing the Logging class
+import '../core/logging/logging.dart';
+import '../generated/l10n.dart'; // Importing the Logging class
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -55,7 +56,7 @@ class MyHomePage extends StatelessWidget {
 
   // Function to show the school name with translation
   void showSchool(BuildContext context) {
-    String schoolName = 'ABC School'; // You can replace this with dynamic data
+    String schoolName = S.current.greeting;
 
     showDialog(
       context: context,
