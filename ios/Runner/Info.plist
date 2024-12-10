@@ -45,5 +45,17 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+    <key>NSCameraUsageDescription</key>
+    <string>We need access to your camera for scanning QR codes</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your location for location-based services</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need your microphone for voice communication</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library for uploading pictures</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>We need access to Bluetooth for connecting to devices</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>We need Bluetooth access for device pairing</string>
 </dict>
 </plist>

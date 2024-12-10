@@ -40,5 +40,19 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
+
+    target.build_configurations.each do |config|
+      # Enable permissions macros as needed for required features
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
+        '$(inherited)',
+
+        # Enable necessary permission macros for the app
+        'PERMISSION_CAMERA=1',
+        'PERMISSION_LOCATION=1',
+        'PERMISSION_MICROPHONE=1',
+        'PERMISSION_BLUETOOTH=1',
+        'PERMISSION_NOTIFICATIONS=1',
+      ]
+    end
   end
 end
