@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_template/core/constants/app_constants.dart';
 
 import '../logging/logging.dart'; // Import Talker for logging
@@ -11,7 +10,7 @@ class DioClient {
   DioClient()
       : dio = Dio(
           BaseOptions(
-            baseUrl: dotenv.env[AppConstants.baseUrl] ?? "",
+            baseUrl: AppConstants.baseUrl,
             // Get base URL from .env file or fallback
             connectTimeout: Duration(seconds: 30),
             receiveTimeout: Duration(seconds: 30),

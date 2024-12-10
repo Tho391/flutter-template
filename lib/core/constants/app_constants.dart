@@ -1,3 +1,7 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class AppConstants {
-  static const String baseUrl = "BASE_URL";
+  static String get baseUrl => dotenv.env['BASE_SOCKET_URL'] ?? '';
+
+  static String get baseSocketUrl => dotenv.env['BASE_SOCKET_URL'] ?? '';
 }
