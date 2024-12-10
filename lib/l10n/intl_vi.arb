@@ -1,0 +1,6 @@
+{
+  "@@locale": "vi",
+  "greetingMessage": "Xin chào {name}!",
+  "remainingEmailsMessage": "{count, plural, =0 {Không còn email nào cho {userName}.} =1 {Còn một email cho {userName}.} other {Còn {count} email cho {userName}.}}",
+  "schoolMessage": "Trường học của bạn là {schoolName}!"
+}

@@ -1,0 +1,6 @@
+{
+  "@@locale": "en",
+  "greetingMessage": "Hello {name}!",
+  "remainingEmailsMessage": "{count, plural, =0 {No more emails for {userName}.} =1 {One email left for {userName}.} other {There are {count} emails left for {userName}.}}",
+  "schoolMessage": "Your school is {schoolName}!"
+}
