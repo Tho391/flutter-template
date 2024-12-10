@@ -1,7 +1,13 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../domain/entities/user.dart';
+import '../../../../core/error/failure.dart';
+import '../entities/user.dart';
 
 abstract class LoginRepository {
-  Future<Either<String, String>> login(User user);
+  Future<Either<Failure, User>> login({
+    required String username,
+    required String password,
+  });
+
+  Future<void> logout();
 }

@@ -5,6 +5,7 @@ import 'package:permission_handler/permission_handler.dart'; // For permission h
 
 import '../app/flavors.dart'; // Assuming you are using F class for flavors
 import '../core/logging/logging.dart';
+import '../features/login/presentation/login_screen.dart';
 import '../generated/l10n.dart'; // Importing the Logging class
 
 class MyHomePage extends StatelessWidget {
@@ -114,6 +115,18 @@ class MyHomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => showSchool(context),
               child: const Text('Show School'),
+            ),
+            // Button to navigate to Login Screen
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          LoginScreen()), // Navigate to LoginScreen
+                );
+              },
+              child: const Text('Go to Login Screen'),
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_template/core/constants/app_constants.dart';
 
 import '../logging/logging.dart'; // Import Talker for logging
@@ -40,3 +41,7 @@ class DioClient {
     }
   }
 }
+
+final dioProvider = Provider<Dio>((ref) {
+  return DioClient().dio;
+});

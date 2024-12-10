@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/database/database_helper.dart';
 import '../core/environment/environment_config.dart';
@@ -26,5 +27,5 @@ FutureOr<void> main() async {
   }
 
   // Run the app
-  runApp(const App());
+  runApp(const ProviderScope(child: App()));
 }

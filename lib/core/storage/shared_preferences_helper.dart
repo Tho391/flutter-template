@@ -1,3 +1,4 @@
+import 'package:flutter_template/core/constants/app_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesHelper {
@@ -32,5 +33,10 @@ class SharedPreferencesHelper {
   static Future<void> remove(String key) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(key);
+  }
+
+  static Future<void> clearToken() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(AppConstants.accessTokenKey);
   }
 }
