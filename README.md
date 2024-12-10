@@ -1,16 +1,66 @@
-# flutter_template
+# Running Flutter App with Different Flavors
 
-A new Flutter project.
+### Step 1: Ensure You Have Configured Flavors
+You should have already set up the flavors in your `pubspec.yaml` file using `flutter_flavorizr` as described. Ensure your Android and iOS configurations are correct.
 
-## Getting Started
+### Step 2: Running the App with Different Flavors
 
-This project is a starting point for a Flutter application.
+Use the following commands to run the app in different flavors from the command line.
 
-A few resources to get you started if this is your first Flutter project:
+#### 1. **Running the Development Flavor (`dev`)**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To run the app in the `dev` flavor (debug mode):
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter run --flavor dev -t lib/main_dev.dart
+```
+
+#### 2. **Running the QA Flavor (`qa`)**
+
+To run the app in the `qa` flavor (debug mode):
+
+```bash
+flutter run --flavor qa -t lib/main_qa.dart
+```
+
+#### 3. **Running the Production Flavor (`debug mode`)**
+
+To run the app in the `prod` flavor (debug mode):
+
+```bash
+flutter run --flavor prod -t lib/main_prod.dart
+```
+
+### Step 3: Build the App for Release
+
+To build the app for a specific flavor in release mode:
+
+#### 1. **Build the Development Flavor (`dev`)**
+
+```bash
+flutter build apk --flavor dev -t lib/main_dev.dart
+```
+
+```bash
+flutter build ios --flavor dev -t lib/main_dev.dart
+```
+
+#### 2. **Build the QA Flavor (`qa`)**
+
+```bash
+flutter build apk --flavor qa -t lib/main_qa.dart
+```
+
+```bash
+flutter build ios --flavor qa -t lib/main_qa.dart
+```
+
+#### 3. **Build the Production Flavor (`prod`)**
+
+```bash
+flutter build apk --flavor prod -t lib/main_prod.dart
+```
+
+```bash
+flutter build ios --flavor prod -t lib/main_prod.dart
+```

@@ -61,7 +61,9 @@ dependencies:
   provider: ^6.1.2
 
   #log
-  logger: ^2.5.0
+  talker: ^4.5.2
+  talker_flutter: ^4.5.2
+  talker_dio_logger: ^4.5.2
 
   #serialize
   freezed: ^2.5.7
@@ -81,6 +83,7 @@ dependencies:
   #config app
   flutter_dotenv: ^5.2.1
   flutter_flavorizr: ^2.2.3
+
 
 
 
