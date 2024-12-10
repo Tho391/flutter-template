@@ -42,7 +42,6 @@ dependencies:
 
   #network
   dio: ^5.7.0
-  pretty_dio_logger: ^1.4.0
   socket_io_client: ^3.0.2
 
   #bluetooth
@@ -116,7 +115,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+      - .env/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
