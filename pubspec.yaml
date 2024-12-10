@@ -36,6 +36,54 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
+  #database
+  sqflite: ^2.4.1
+  shared_preferences: ^2.3.3
+
+  #network
+  dio: ^5.7.0
+  pretty_dio_logger: ^1.4.0
+  socket_io_client: ^3.0.2
+
+  #bluetooth
+  flutter_blue_plus: ^1.34.5
+
+  #permission
+  permission_handler: ^11.3.1
+
+  #localication
+  intl: ^0.20.1
+
+  #image
+  cached_network_image: ^3.4.1
+
+  #state management
+  provider: ^6.1.2
+
+  #log
+  logger: ^2.5.0
+
+  #serialize
+  freezed: ^2.5.7
+  freezed_annotation: ^2.4.4
+
+  #UI
+  flutter_native_splash: ^2.4.3
+  introduction_screen: ^3.1.14
+  showcaseview: ^3.0.0
+
+  #navigation
+  go_router: ^14.6.2
+
+  #timezone
+  timezone: ^0.10.0
+
+  #config app
+  flutter_dotenv: ^5.2.1
+  flutter_flavorizr: ^2.2.3
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -46,6 +94,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  build_runner: ^2.4.13
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -88,3 +137,59 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor"
+      productFlavors:
+        dev:
+          applicationId: "com.example.flutter_template.dev"
+        qa:
+          applicationId: "com.example.flutter_template.qa"
+        prod:
+          applicationId: "com.example.flutter_template"
+    ios:
+      appIdSuffix: ""
+      productFlavors:
+        dev:
+          bundleId: "com.example.flutter_template.dev"
+          displayName: "Development"
+        qa:
+          bundleId: "com.example.flutter_template.qa"
+          displayName: "QA"
+        prod:
+          bundleId: "com.example.flutter_template"
+          displayName: "Production"
+  flavors:
+    dev:
+      app:
+        name: "Flutter Template Dev"
+        description: "Development Flavor"
+    qa:
+      app:
+        name: "Flutter Template QA"
+        description: "Quality Assurance Flavor"
+    prod:
+      app:
+        name: "Flutter Template"
+        description: "Production Flavor"
+  configurations:
+    dev:
+      debug:
+        buildMode: debug
+        versionNameSuffix: "-debug"
+      release:
+        buildMode: release
+    qa:
+      debug:
+        buildMode: debug
+        versionNameSuffix: "-debug"
+      release:
+        buildMode: release
+    prod:
+      debug:
+        buildMode: debug
+        versionNameSuffix: "-debug"
+      release:
+        buildMode: release
