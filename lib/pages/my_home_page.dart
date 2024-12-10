@@ -1,3 +1,5 @@
+import 'dart:core';
+
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart'; // For permission handling
 
@@ -51,6 +53,27 @@ class MyHomePage extends StatelessWidget {
     }
   }
 
+  // Function to show the school name with translation
+  void showSchool(BuildContext context) {
+    String schoolName = 'ABC School'; // You can replace this with dynamic data
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('School Name'),
+          content: Text(schoolName),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,6 +107,12 @@ class MyHomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: requestCameraPermission,
               child: const Text('Request Camera Permission'),
+            ),
+            SizedBox(height: 16),
+            // New Button to show school
+            ElevatedButton(
+              onPressed: () => showSchool(context),
+              child: const Text('Show School'),
             ),
           ],
         ),

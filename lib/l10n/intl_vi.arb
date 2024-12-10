@@ -1,6 +1,8 @@
 {
-  "@@locale": "vi",
-  "greetingMessage": "Xin chào {name}!",
-  "remainingEmailsMessage": "{count, plural, =0 {Không còn email nào cho {userName}.} =1 {Còn một email cho {userName}.} other {Còn {count} email cho {userName}.}}",
-  "schoolMessage": "Trường học của bạn là {schoolName}!"
+  "title": "Ứng dụng Flutter của tôi",
+  "greeting": "Chào mừng bạn đến với ứng dụng!",
+  "@greeting": {
+    "description": "Một lời chào đón cho người dùng"
+  },
+  "flavorMessage": "Bạn đang sử dụng phiên bản {flavor} của ứng dụng"
 }

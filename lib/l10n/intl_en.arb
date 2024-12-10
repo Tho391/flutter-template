@@ -1,6 +1,8 @@
 {
-  "@@locale": "en",
-  "greetingMessage": "Hello {name}!",
-  "remainingEmailsMessage": "{count, plural, =0 {No more emails for {userName}.} =1 {One email left for {userName}.} other {There are {count} emails left for {userName}.}}",
-  "schoolMessage": "Your school is {schoolName}!"
+  "title": "My Flutter App",
+  "greeting": "Hello, welcome to the app!",
+  "@greeting": {
+    "description": "A welcoming greeting for users"
+  },
+  "flavorMessage": "You are using the {flavor} version of the app"
 }
